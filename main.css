@@ -25,3 +25,18 @@ body{
     border-color: #0000FF;
   }
 }
+h1{
+    color: var(--accent-color);
+}
+
+.paragrafoMaior{
+    color: var(--text-color);
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.paragrafoMenor{
+    color: var(--text-color);
+    font-weight: normal;
+    font-size: 20px;
+}
