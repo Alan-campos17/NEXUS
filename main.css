@@ -1,0 +1,10 @@
+:root{
+    --bg-color:#150930;
+    --surface-color:#201045;
+    --accent-color:#a838f0;
+    --text-color:#ffffff;
+}
+
+body{
+    background-color: var(--bg-color);
+}
