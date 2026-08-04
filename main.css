@@ -29,6 +29,7 @@ body{
 
 #div-pai{
     display: flex;
+    flex-direction: column;
     gap: 16px;
     padding: 16px;
     background: rgba(255, 255, 255, 0.08);
@@ -39,7 +40,6 @@ body{
 }
 
 .div-filho{
-    flex: 1;
     padding: 16px;
     background: rgba(168, 56, 240, 0.15);
     color: var(--text-color);
