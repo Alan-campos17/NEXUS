@@ -106,6 +106,118 @@ body{
     min-height: 240px;
 }
 
+body.tela1 {
+    background-image:
+        radial-gradient(circle at top left, rgb(139, 0, 85) 0%, rgba(139, 0, 85, 0.95) 35%, transparent 45%),
+        radial-gradient(circle at top right, rgb(255, 0, 150) 0%, rgba(255, 0, 150, 0.95) 35%, transparent 45%),
+        radial-gradient(circle at bottom right, rgb(0, 200, 255) 0%, rgba(0, 200, 255, 0.95) 35%, transparent 45%);
+}
+
+body.tela2 {
+    background-image:
+        radial-gradient(circle at top left, rgb(9, 18, 75) 0%, rgba(9, 18, 75, 0.95) 35%, transparent 45%),
+        radial-gradient(circle at top right, rgb(0, 185, 245) 0%, rgba(0, 185, 245, 0.95) 35%, transparent 45%),
+        radial-gradient(circle at bottom right, rgb(255, 145, 60) 0%, rgba(255, 145, 60, 0.95) 35%, transparent 45%);
+}
+
+body.tela3 {
+    background-image:
+        radial-gradient(circle at top left, rgb(20, 40, 140) 0%, rgba(20, 40, 140, 0.95) 35%, transparent 45%),
+        radial-gradient(circle at top right, rgb(80, 220, 255) 0%, rgba(80, 220, 255, 0.95) 35%, transparent 45%),
+        radial-gradient(circle at bottom right, rgb(20, 200, 120) 0%, rgba(20, 200, 120, 0.95) 35%, transparent 45%);
+}
+
+body.teladois {
+    background-image:
+        radial-gradient(circle at top left, rgb(148, 0, 148) 0%, rgba(148, 0, 148, 0.95) 35%, transparent 45%),
+        radial-gradient(circle at top right, rgb(255, 195, 0) 0%, rgba(255, 195, 0, 0.95) 35%, transparent 45%),
+        radial-gradient(circle at bottom right, rgb(90, 20, 120) 0%, rgba(90, 20, 120, 0.95) 35%, transparent 45%);
+}
+
+body.telaquatro {
+    background-image:
+        radial-gradient(circle at top left, rgb(8, 100, 70) 0%, rgba(8, 100, 70, 0.95) 35%, transparent 45%),
+        radial-gradient(circle at top right, rgb(120, 230, 210) 0%, rgba(120, 230, 210, 0.95) 35%, transparent 45%),
+        radial-gradient(circle at bottom right, rgb(255, 70, 140) 0%, rgba(255, 70, 140, 0.95) 35%, transparent 45%);
+}
+
+body.telatres {
+    background-image:
+        radial-gradient(circle at top left, rgb(135, 0, 0) 0%, rgba(135, 0, 0, 0.95) 35%, transparent 45%),
+        radial-gradient(circle at top right, rgb(255, 120, 120) 0%, rgba(255, 120, 120, 0.95) 35%, transparent 45%),
+        radial-gradient(circle at bottom right, rgb(150, 60, 190) 0%, rgba(150, 60, 190, 0.95) 35%, transparent 45%);
+}
+
+body.tela2 .left_container {
+    background: rgb(18, 26, 95);
+}
+
+body.tela2 .main_container {
+    background: rgb(120, 180, 235);
+    color: #000;
+}
+
+body.tela2 .right_container {
+    background: linear-gradient(180deg, rgb(0, 190, 255) 0%, rgb(0, 110, 180) 100%);
+    color: white;
+}
+
+body.tela3 .left_container {
+    background: rgb(0, 55, 135);
+}
+
+body.tela3 .main_container {
+    background: rgb(120, 210, 240);
+    color: #000;
+}
+
+body.tela3 .right_container {
+    background: linear-gradient(180deg, rgb(30, 190, 100) 0%, rgb(10, 130, 80) 100%);
+    color: white;
+}
+
+body.teladois .left_container {
+    background: rgb(140, 0, 130);
+}
+
+body.teladois .main_container {
+    background: rgb(220, 120, 220);
+    color: #000;
+}
+
+body.teladois .right_container {
+    background: linear-gradient(180deg, rgb(255, 210, 50) 0%, rgb(220, 140, 180) 100%);
+    color: #000;
+}
+
+body.telaquatro .left_container {
+    background: rgb(5, 105, 85);
+}
+
+body.telaquatro .main_container {
+    background: rgb(140, 235, 210);
+    color: #000;
+}
+
+body.telaquatro .right_container {
+    background: linear-gradient(180deg, rgb(245, 50, 140) 0%, rgb(170, 40, 110) 100%);
+    color: white;
+}
+
+body.telatres .left_container {
+    background: rgb(140, 0, 25);
+}
+
+body.telatres .main_container {
+    background: rgb(230, 110, 140);
+    color: #000;
+}
+
+body.telatres .right_container {
+    background: linear-gradient(180deg, rgb(160, 60, 200) 0%, rgb(100, 40, 140) 100%);
+    color: white;
+}
+
 .feed_container {
  display: block;
     width: 100%;
