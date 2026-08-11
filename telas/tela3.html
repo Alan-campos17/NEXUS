@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../main.css">
+    <link rel="stylesheet" href="tela.css">
     <title>Tela 3</title>
 </head>
 <body class="tela3">
@@ -17,15 +18,31 @@
         <a href="telatres.html" class="navbar-item">Tela 6</a>
     </nav>
     <div class="app">
-        <header class="header_container"></header>
+        <header class="header_container">
+            <div>
+                <h1>Exercício 3</h1>
+                <p class="paragrafoMenor">Grade combinada com painel lateral e quatro blocos principais.</p>
+            </div>
+            <span class="section-tag">Composição</span>
+        </header>
         <aside class="left_container">
-            <p class="paragrafoMenor">Menu lateral</p>
+            <div class="panel-box">
+                <strong>Notas rápidas</strong>
+                <p>Use grid e flex juntos para controlar o fluxo do conteúdo.</p>
+            </div>
         </aside>
         <main class="main_container">
-            <p class="paragrafoMaior">Tela 3</p>
+            <div class="grid-exercise tela3-grid">
+                <div class="panel-box"><strong>Introdução</strong><p>O primeiro bloco define o cenário para a página.</p></div>
+                <div class="panel-box"><strong>Detalhes</strong><p>O segundo bloco mostra informações detalhadas.</p></div>
+                <div class="panel-box"><strong>Ação</strong><p>Use o botão para reforçar a ideia de interação.</p><button>Ver exemplo</button></div>
+            </div>
         </main>
         <aside class="right_container">
-            <p class="paragrafoMenor">Painel de informações</p>
+            <div class="panel-box">
+                <strong>Ajuda</strong>
+                <p>Observações finais sobre o exercício e o uso de grid.</p>
+            </div>
         </aside>
     </div>
 </body>

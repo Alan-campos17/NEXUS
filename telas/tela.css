@@ -1,0 +1,199 @@
+/* Styles for each tela exercise page */
+body.tela1 .app {
+    grid-template-areas:
+        "header header header"
+        "left main right";
+    grid-template-columns: minmax(200px, 240px) minmax(320px, 1fr) minmax(200px, 240px);
+    grid-template-rows: auto 1fr;
+}
+
+body.tela2 .app {
+    grid-template-areas:
+        "header header"
+        "left main"
+        "left right";
+    grid-template-columns: minmax(220px, 240px) minmax(360px, 1fr);
+    grid-template-rows: auto 1fr auto;
+}
+
+body.tela3 .app {
+    grid-template-areas:
+        "header header header"
+        "main main right";
+    grid-template-columns: minmax(320px, 1fr) minmax(220px, 260px);
+    grid-template-rows: auto 1fr;
+}
+
+body.teladois .app {
+    grid-template-areas:
+        "header header header"
+        "left main right";
+    grid-template-columns: minmax(220px, 240px) minmax(360px, 1fr) minmax(220px, 240px);
+    grid-template-rows: auto 1fr;
+}
+
+body.telaquatro .app {
+    grid-template-areas:
+        "header header header"
+        "main main right";
+    grid-template-columns: minmax(300px, 1fr) minmax(280px, 300px);
+    grid-template-rows: auto 1fr;
+}
+
+body.telatres .app {
+    grid-template-areas:
+        "header header header"
+        "left main right";
+    grid-template-columns: minmax(180px, 200px) minmax(360px, 1fr) minmax(200px, 240px);
+    grid-template-rows: auto 1fr;
+}
+
+.header_container {
+    min-height: auto;
+}
+
+.left_container,
+.main_container,
+.right_container {
+    min-height: 0;
+}
+
+.panel-box {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding: 18px;
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    border-radius: 14px;
+    color: #fff;
+}
+
+.panel-box strong,
+.panel-box h2 {
+    margin: 0;
+    color: #ffffff;
+}
+
+.panel-box p {
+    margin: 0;
+    line-height: 1.5;
+}
+
+.panel-box button,
+button {
+    border: none;
+    padding: 11px 16px;
+    background: rgba(168, 56, 240, 0.95);
+    color: #fff;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: transform 0.2s ease, background 0.2s ease;
+}
+
+button:hover {
+    background: rgba(168, 56, 240, 1);
+    transform: translateY(-1px);
+}
+
+.grid-exercise {
+    display: grid;
+    gap: 14px;
+}
+
+.tela1-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.tela2-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.tela3-grid {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, minmax(120px, auto));
+}
+
+.tela4-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.tela5-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-template-rows: 120px repeat(2, minmax(120px, auto));
+    grid-template-areas:
+        "feature feature stats"
+        "card1 card2 stats"
+        "card3 card4 stats";
+}
+
+.tela5-grid > .card-feature { grid-area: feature; }
+.tela5-grid > .card-stats { grid-area: stats; }
+.tela5-grid > .card1 { grid-area: card1; }
+.tela5-grid > .card2 { grid-area: card2; }
+.tela5-grid > .card3 { grid-area: card3; }
+.tela5-grid > .card4 { grid-area: card4; }
+
+.tela6-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-rows: repeat(2, minmax(140px, auto));
+}
+
+.title-small {
+    font-size: 1.05rem;
+    color: #f4f4ff;
+}
+
+.section-tag {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 6px 12px;
+    border-radius: 999px;
+    background: rgba(168, 56, 240, 0.18);
+    color: #fff;
+    font-size: 0.9rem;
+}
+
+body.tela2 .main_container .grid-note,
+body.tela3 .main_container .grid-note,
+body.telaquatro .main_container .grid-note {
+    display: grid;
+    gap: 14px;
+}
+
+body.tela2 .main_container .grid-note {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+body.tela3 .main_container .grid-note {
+    grid-template-columns: 1fr;
+}
+
+body.telaquatro .main_container .grid-note {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+@media (max-width: 900px) {
+    .app {
+        grid-template-areas:
+            "header"
+            "main"
+            "left"
+            "right";
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+    }
+
+    body.tela2 .app,
+    body.tela3 .app,
+    body.teladois .app,
+    body.telaquatro .app,
+    body.telatres .app {
+        grid-template-areas:
+            "header"
+            "main"
+            "left"
+            "right";
+    }
+}

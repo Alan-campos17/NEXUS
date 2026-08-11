@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../main.css">
+    <link rel="stylesheet" href="tela.css">
     <title>Tela 2</title>
 </head>
 <body class="tela2">
@@ -17,15 +18,36 @@
         <a href="telatres.html" class="navbar-item">Tela 6</a>
     </nav>
     <div class="app">
-        <header class="header_container"></header>
+        <header class="header_container">
+            <div>
+                <h1>Exercício 2</h1>
+                <p class="paragrafoMenor">Uma grade com painel lateral alto e área principal expansível.</p>
+            </div>
+            <span class="section-tag">Painel fixo</span>
+        </header>
         <aside class="left_container">
-            <p class="paragrafoMenor">Menu lateral</p>
+            <div class="panel-box">
+                <strong>Preparação</strong>
+                <p>Este painel lateral usa mais espaço vertical para reorganizar o conteúdo.</p>
+            </div>
+            <div class="panel-box">
+                <strong>Objetivo</strong>
+                <p>Mostrar um layout dividido entre informações e conteúdo principal.</p>
+            </div>
         </aside>
         <main class="main_container">
-            <p class="paragrafoMaior">Tela 2</p>
+            <div class="grid-exercise tela2-grid">
+                <div class="panel-box"><strong>Campo 1</strong><p>Primeira área do exercício.</p></div>
+                <div class="panel-box"><strong>Campo 2</strong><p>Segunda área do exercício.</p></div>
+                <div class="panel-box"><strong>Campo 3</strong><p>Terceira área para texto.</p></div>
+                <div class="panel-box"><strong>Campo 4</strong><p>Área que mostra o botão de ação.</p><button>Continuar</button></div>
+            </div>
         </main>
         <aside class="right_container">
-            <p class="paragrafoMenor">Painel de informações</p>
+            <div class="panel-box">
+                <strong>Resumo</strong>
+                <p>O painel direito complementa o layout com informações rápidas para o aluno.</p>
+            </div>
         </aside>
     </div>
 </body>

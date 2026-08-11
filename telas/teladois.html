@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../main.css">
+    <link rel="stylesheet" href="tela.css">
     <title>Tela 4</title>
 </head>
 <body class="teladois">
@@ -17,15 +18,33 @@
         <a href="telatres.html" class="navbar-item">Tela 6</a>
     </nav>
     <div class="app">
-        <header class="header_container"></header>
+        <header class="header_container">
+            <div>
+                <h1>Exercício 4</h1>
+                <p class="paragrafoMenor">Grade com três colunas e blocos de conteúdo separados.</p>
+            </div>
+            <span class="section-tag">Três colunas</span>
+        </header>
         <aside class="left_container">
-            <p class="paragrafoMenor">Menu lateral</p>
+            <div class="panel-box">
+                <strong>Guia</strong>
+                <p>O painel esquerdo contém passos para acompanhar o exercício.</p>
+                <button>Iniciar</button>
+            </div>
         </aside>
         <main class="main_container">
-            <p class="paragrafoMaior">Tela 4</p>
+            <div class="grid-exercise tela4-grid">
+                <div class="panel-box"><strong>Passo 1</strong><p>Defina o grid principal.</p></div>
+                <div class="panel-box"><strong>Passo 2</strong><p>Estenda o painel principal em duas colunas.</p></div>
+                <div class="panel-box"><strong>Passo 3</strong><p>Crie espaços para informação e ação.</p></div>
+                <div class="panel-box"><strong>Passo 4</strong><p>Finalize com um texto de resumo e um botão.</p><button>Concluir</button></div>
+            </div>
         </main>
         <aside class="right_container">
-            <p class="paragrafoMenor">Painel de informações</p>
+            <div class="panel-box">
+                <strong>Resumo</strong>
+                <p>Mostre aqui resultados rápidos e destaque os pontos principais.</p>
+            </div>
         </aside>
     </div>
 </body>

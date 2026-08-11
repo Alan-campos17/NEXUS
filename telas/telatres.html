@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../main.css">
+    <link rel="stylesheet" href="tela.css">
     <title>Tela 6</title>
 </head>
 <body class="telatres">
@@ -17,15 +18,32 @@
         <a href="telatres.html" class="navbar-item active">Tela 6</a>
     </nav>
     <div class="app">
-        <header class="header_container"></header>
+        <header class="header_container">
+            <div>
+                <h1>Exercício 6</h1>
+                <p class="paragrafoMenor">Uma última tela com blocos cuidadosamente distribuídos.</p>
+            </div>
+            <span class="section-tag">Quadro final</span>
+        </header>
         <aside class="left_container">
-            <p class="paragrafoMenor">Menu lateral</p>
+            <div class="panel-box">
+                <strong>Passos</strong>
+                <p>Liste cada etapa para completar o treino com CSS Grid.</p>
+            </div>
         </aside>
         <main class="main_container">
-            <p class="paragrafoMaior">Tela 6</p>
+            <div class="grid-exercise tela6-grid">
+                <div class="panel-box"><strong>Bloco A</strong><p>Area superior esquerda com conteúdo breve.</p></div>
+                <div class="panel-box"><strong>Bloco B</strong><p>Area superior direita organizada para um texto.</p></div>
+                <div class="panel-box"><strong>Bloco C</strong><p>Area inferior esquerda com um resultado.</p></div>
+                <div class="panel-box"><strong>Bloco D</strong><p>Area inferior direita e botão de ação.</p><button>Finalizar</button></div>
+            </div>
         </main>
         <aside class="right_container">
-            <p class="paragrafoMenor">Painel de informações</p>
+            <div class="panel-box">
+                <strong>Resumo final</strong>
+                <p>Use este painel para rever todos os pontos do layout.</p>
+            </div>
         </aside>
     </div>
 </body>
