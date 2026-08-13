@@ -1,10 +1,6 @@
-:root {
-    --texto: #ffffff;
-    --borda: #ffffff;
-    --navbar: #201045;
-    --botao: #ffffff;
-    --botao-ativo: #9e4bf7;
-}
+/* =========================================
+   CONFIGURAÇÕES GERAIS
+========================================= */
 
 * {
     box-sizing: border-box;
@@ -12,287 +8,486 @@
 
 html,
 body {
+    width: 100%;
+    min-height: 100%;
     margin: 0;
     padding: 0;
-    min-height: 100vh;
 }
 
 body {
+    min-height: 100vh;
+
     background: #000000;
-    color: var(--texto);
+
     font-family: Arial, sans-serif;
 }
 
-/* =========================
+
+/* =========================================
    NAVEGAÇÃO
-========================= */
+========================================= */
 
 .navbar {
     display: flex;
+
     align-items: center;
-    gap: 16px;
+
+    gap: 15px;
+
+    width: 100%;
 
     padding: 12px 20px;
-    margin: 0;
 
-    background: var(--navbar);
-    border: 1px solid var(--borda);
+    background: #201045;
+
+    border: 2px solid #ffffff;
 }
 
+
 .navbar-item {
-    display: inline-flex;
+    display: flex;
+
     align-items: center;
     justify-content: center;
 
-    min-width: 82px;
-    padding: 10px 16px;
+    padding: 9px 18px;
 
-    background: var(--botao);
+    background: #ffffff;
+
     color: #000000;
 
-    border-radius: 25px;
+    border-radius: 20px;
 
     text-decoration: none;
+
     font-weight: bold;
+
+    transition: 0.2s;
 }
+
 
 .navbar-item:hover {
-    background: #c864f0;
+    background: #9e4bf7;
+
     color: #ffffff;
 }
+
 
 .navbar-item.active {
-    background: var(--botao-ativo);
+    background: #9e4bf7;
+
     color: #ffffff;
 }
 
-/* =========================
-   GRID PRINCIPAL
-========================= */
 
-.app {
+/* =========================================
+   HOME
+========================================= */
+
+.home-container {
+
     display: grid;
 
-    width: 100%;
-    min-height: calc(100vh - 62px);
+    grid-template-columns: repeat(3, 1fr);
 
-    grid-template-areas:
-        "header header header"
-        "left main right";
+    gap: 20px;
 
-    grid-template-columns:
-        240px
-        1fr
-        240px;
+    width: calc(100% - 50px);
 
-    grid-template-rows:
-        80px
-        1fr;
+    min-height: 500px;
 
-    gap: 16px;
-
-    padding: 24px;
-}
-
-.header_container {
-    grid-area: header;
-}
-
-/* =========================
-   ÁREA ESQUERDA
-========================= */
-
-.left_container {
-    grid-area: left;
-
-    min-height: 400px;
-
-    background: #8b0055;
-
-    border: 2px solid #ffffff;
-}
-
-/* =========================
-   ÁREA CENTRAL
-========================= */
-
-.main_container {
-    grid-area: main;
-
-    min-height: 400px;
-
-    background: #c864b4;
-
-    border: 2px solid #ffffff;
+    margin: 25px auto;
 
     padding: 20px;
 }
 
-/* =========================
-   ÁREA DIREITA
-========================= */
 
-.right_container {
-    grid-area: right;
+.home-box {
 
     min-height: 400px;
 
-    background: #ff0096;
-
-    border: 2px solid #ffffff;
+    border: 3px solid #ffffff;
 }
 
-/* =========================
-   TELAS
-========================= */
 
-/* TELA 1 */
-
-body.tela1 {
-    background: #150930;
-}
-
-body.tela1 .left_container {
+.home-box-1 {
     background: #8b0055;
 }
 
-body.tela1 .main_container {
+
+.home-box-2 {
     background: #c864b4;
 }
 
-body.tela1 .right_container {
+
+.home-box-3 {
     background: #ff0096;
 }
 
 
-/* TELA 2 */
+/* =========================================
+   GRID DAS TELAS
+========================================= */
+
+.app {
+
+    display: grid;
+
+    grid-template-areas:
+
+        "header header header"
+
+        "left main right";
+
+    grid-template-columns:
+
+        1fr
+        2fr
+        1fr;
+
+    grid-template-rows:
+
+        80px
+        1fr;
+
+    gap: 18px;
+
+    width: calc(100% - 50px);
+
+    min-height: 650px;
+
+    margin: 25px auto;
+
+    padding: 20px;
+}
+
+
+/* =========================================
+   HEADER
+========================================= */
+
+.header_container {
+
+    grid-area: header;
+
+    min-height: 70px;
+
+    background: #000000;
+
+    border: 3px solid #ffffff;
+}
+
+
+/* =========================================
+   ESQUERDA
+========================================= */
+
+.left_container {
+
+    grid-area: left;
+
+    min-height: 500px;
+
+    background: #8b0055;
+
+    border: 3px solid #ffffff;
+}
+
+
+/* =========================================
+   CENTRO
+========================================= */
+
+.main_container {
+
+    grid-area: main;
+
+    min-height: 500px;
+
+    background: #c864b4;
+
+    border: 3px solid #ffffff;
+
+    padding: 20px;
+}
+
+
+/* =========================================
+   DIREITA
+========================================= */
+
+.right_container {
+
+    grid-area: right;
+
+    min-height: 500px;
+
+    background: #ff0096;
+
+    border: 3px solid #ffffff;
+}
+
+
+/* =========================================
+   TELA 1
+========================================= */
+
+body.tela1 {
+
+    background: #000000;
+}
+
+
+body.tela1 .header_container {
+
+    background: #48a9d8;
+}
+
+
+body.tela1 .left_container {
+
+    background: #d45a5a;
+}
+
+
+body.tela1 .main_container {
+
+    background: #d45a5a;
+}
+
+
+body.tela1 .right_container {
+
+    background: #48a9d8;
+}
+
+
+/* =========================================
+   TELA 2
+========================================= */
 
 body.tela2 {
-    background: #09124b;
+
+    background: #000000;
 }
+
+
+body.tela2 .header_container {
+
+    background: #438b38;
+}
+
 
 body.tela2 .left_container {
-    background: #121a5f;
+
+    background: #4f008f;
 }
+
 
 body.tela2 .main_container {
-    background: #78b4eb;
+
+    background: #4f008f;
 }
+
 
 body.tela2 .right_container {
-    background: #009eff;
+
+    background: #438b38;
 }
 
 
-/* TELA 3 */
+/* =========================================
+   TELA 3
+========================================= */
 
 body.tela3 {
-    background: #14288c;
+
+    background: #000000;
 }
+
+
+body.tela3 .header_container {
+
+    background: #8279ed;
+}
+
 
 body.tela3 .left_container {
-    background: #003787;
+
+    background: #438b38;
 }
+
 
 body.tela3 .main_container {
-    background: #78d2f0;
+
+    background: #8279ed;
 }
+
 
 body.tela3 .right_container {
-    background: #1ebe64;
+
+    background: #438b38;
 }
 
 
-/* TELA 4 */
+/* =========================================
+   TELA 4
+========================================= */
 
 body.teladois {
-    background: #940094;
+
+    background: #000000;
 }
+
+
+body.teladois .header_container {
+
+    background: #10164d;
+}
+
 
 body.teladois .left_container {
-    background: #8c0082;
+
+    background: #10164d;
 }
+
 
 body.teladois .main_container {
-    background: #dc78dc;
+
+    background: #438b38;
 }
+
 
 body.teladois .right_container {
-    background: #ffd232;
+
+    background: #10164d;
 }
 
 
-/* TELA 5 */
+/* =========================================
+   TELA 5
+========================================= */
 
 body.telaquatro {
-    background: #086654;
+
+    background: #000000;
 }
+
+
+body.telaquatro .header_container {
+
+    background: #438b38;
+}
+
 
 body.telaquatro .left_container {
-    background: #056955;
+
+    background: #4f008f;
 }
+
 
 body.telaquatro .main_container {
-    background: #8cecda;
+
+    background: #4f008f;
 }
+
 
 body.telaquatro .right_container {
-    background: #f5328c;
+
+    background: #438b38;
 }
 
 
-/* TELA 6 */
+/* =========================================
+   TELA 6
+========================================= */
 
 body.telatres {
-    background: #870000;
+
+    background: #000000;
 }
+
+
+body.telatres .header_container {
+
+    background: #d45a5a;
+}
+
 
 body.telatres .left_container {
-    background: #8c0019;
+
+    background: #d45a5a;
 }
+
 
 body.telatres .main_container {
-    background: #e56e8c;
+
+    background: #4f008f;
 }
+
 
 body.telatres .right_container {
-    background: #a03cc8;
+
+    background: #4f008f;
 }
 
 
-/* =========================
-   RESPONSIVIDADE
-========================= */
+/* =========================================
+   RESPONSIVO
+========================================= */
 
 @media (max-width: 700px) {
 
     .navbar {
-        gap: 8px;
-        padding: 10px;
+
         overflow-x: auto;
+
+        gap: 8px;
+
+        padding: 10px;
     }
 
+
     .navbar-item {
-        min-width: 70px;
+
+        flex-shrink: 0;
+
         padding: 8px 12px;
     }
 
+
     .app {
+
         grid-template-areas:
+
             "header"
+
             "left"
+
             "main"
+
             "right";
 
         grid-template-columns: 1fr;
-        grid-template-rows: 60px auto auto auto;
 
-        min-height: auto;
+        grid-template-rows:
+
+            70px
+            250px
+            350px
+            250px;
+
+        width: calc(100% - 20px);
+
+        padding: 10px;
     }
 
-    .left_container,
-    .main_container,
-    .right_container {
-        min-height: 300px;
+
+    .home-container {
+
+        grid-template-columns: 1fr;
+
+        width: calc(100% - 20px);
     }
+
 }
