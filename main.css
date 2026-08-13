@@ -1,131 +1,214 @@
-:root{
-    --bg-color:#150930;
-    --surface-color:#201045;
-    --accent-color:#a838f0;
-    --text-color:#ffffff;
+:root {
+    --text-color: #ffffff;
 }
 
-html, body{
-    height: 100%;
-    min-height: 100vh;
+* {
+    box-sizing: border-box;
 }
 
-body{
+html,
+body {
+    width: 100%;
     min-height: 100vh;
     margin: 0;
-    padding: 0;
-    box-sizing: border-box; /* mantém a borda dentro das dimensões da tela */
-    background-color: #000000;
 }
+
+body {
+    background: #000000;
+    color: #ffffff;
+    font-family: Arial, sans-serif;
+}
+
+/* =========================
+   NAVEGAÇÃO
+========================= */
 
 .navbar {
     display: flex;
-    justify-content: space-between;
     align-items: center;
     gap: 16px;
-    padding: 14px 20px;
-    margin: 0 auto 20px;
-    max-width: 1000px;
+
+    width: 100%;
+    padding: 12px 20px;
+
     background: #201045;
     border: 1px solid #ffffff;
-    border-radius: 14px;
-    box-shadow: 0 8px 30px #000000;
 }
 
 .navbar-item {
-    display: inline-flex;
+    display: flex;
     align-items: center;
-    padding: 10px 16px;
-    border-radius: 999px;
+    justify-content: center;
+
+    padding: 10px 20px;
+
     background: #ffffff;
-    color: var(--text-color);
+    color: #000000;
+
     text-decoration: none;
-    font-weight: 600;
-    transition: background 0.2s ease, color 0.2s ease, transform 0.2s ease;
+    font-weight: bold;
+
+    border-radius: 20px;
 }
 
 .navbar-item:hover {
-    background: #A838F0;
-    color: var(--accent-color);
-    transform: translateY(-1px);
+    background: #9E4BF7;
+    color: #ffffff;
 }
 
 .navbar-item.active {
     background: #9E4BF7;
-    color: var(--accent-color);
+    color: #ffffff;
 }
+
+
+/* =========================
+   ESTRUTURA PRINCIPAL
+========================= */
 
 .app {
     display: grid;
-    width: 100vw;
-    min-height: 100vh;
+
+    width: 100%;
+    min-height: calc(100vh - 70px);
+
     grid-template-areas:
         "header header header"
         "left main right";
-    grid-template-columns: minmax(220px, 240px) minmax(360px, 1fr) minmax(220px, 240px);
-    grid-template-rows: auto 1fr;
+
+    grid-template-columns:
+        1fr
+        2fr
+        1fr;
+
+    grid-template-rows:
+        70px
+        1fr;
+
     gap: 16px;
+
     padding: 24px;
 }
 
+
+/* =========================
+   CABEÇALHO
+========================= */
+
 .header_container {
     grid-area: header;
-    display: block;
+
     width: 100%;
-    height: 72px;
+    height: 70px;
+
+    background: #000000;
 }
+
+
+/* =========================
+   BLOCO ESQUERDO
+========================= */
 
 .left_container {
     grid-area: left;
+
     padding: 18px;
-    background: #8B0055; /* rosa escuro */
-    border: 1px solid #ffffff;
-    border-radius: 16px;
-    min-height: 240px;
+
+    min-height: 400px;
+
+    background: #8B0055;
+
+    border: 2px solid #ffffff;
 }
 
-.right_container {
-    grid-area: right;
-    padding: 18px;
-    background: #ff0096;
-    border: 1px solid #ffffff;
-    border-radius: 16px;
-    min-height: 240px;
-    color: white;
-}
+
+/* =========================
+   BLOCO CENTRAL
+========================= */
 
 .main_container {
     grid-area: main;
+
     padding: 20px;
-    background: #C864B4; /* rosa normal */
-    border: 1px solid #A838F0;
-    border-radius: 16px;
-    min-height: 240px;
+
+    min-height: 400px;
+
+    background: #C864B4;
+
+    border: 2px solid #ffffff;
 }
 
+
+/* =========================
+   BLOCO DIREITO
+========================= */
+
+.right_container {
+    grid-area: right;
+
+    padding: 18px;
+
+    min-height: 400px;
+
+    background: #FF0096;
+
+    border: 2px solid #ffffff;
+
+    color: #ffffff;
+}
+
+
+/* =========================
+   TEXTOS
+========================= */
+
+.paragrafoMaior {
+    color: #ffffff;
+
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.paragrafoMenor {
+    color: #ffffff;
+
+    font-weight: normal;
+    font-size: 20px;
+}
+
+
+/* =========================
+   CORES DAS OUTRAS TELAS
+========================= */
+
 body.tela1 {
-    background-color: #150930;
+    background: #000000;
 }
 
 body.tela2 {
-    background-color: #09124B;
+    background: #09124B;
 }
 
 body.tela3 {
-    background-color: #14288C;
+    background: #14288C;
 }
 
 body.teladois {
-    background-color: #940094;
+    background: #940094;
 }
 
 body.telaquatro {
-    background-color: #086654;
+    background: #086654;
 }
 
 body.telatres {
-    background-color: #870000;
+    background: #870000;
 }
+
+
+/* =========================
+   TELA 2
+========================= */
 
 body.tela2 .left_container {
     background: #121A5F;
@@ -133,13 +216,17 @@ body.tela2 .left_container {
 
 body.tela2 .main_container {
     background: #78B4EB;
-    color: #000;
+    color: #000000;
 }
 
 body.tela2 .right_container {
     background: #009EFF;
-    color: white;
 }
+
+
+/* =========================
+   TELA 3
+========================= */
 
 body.tela3 .left_container {
     background: #003787;
@@ -147,13 +234,17 @@ body.tela3 .left_container {
 
 body.tela3 .main_container {
     background: #78D2F0;
-    color: #000;
+    color: #000000;
 }
 
 body.tela3 .right_container {
     background: #1EBE64;
-    color: white;
 }
+
+
+/* =========================
+   TELA 4
+========================= */
 
 body.teladois .left_container {
     background: #8C0082;
@@ -161,13 +252,18 @@ body.teladois .left_container {
 
 body.teladois .main_container {
     background: #DC78DC;
-    color: #000;
+    color: #000000;
 }
 
 body.teladois .right_container {
     background: #FFD232;
-    color: #000;
+    color: #000000;
 }
+
+
+/* =========================
+   TELA 5
+========================= */
 
 body.telaquatro .left_container {
     background: #056955;
@@ -175,13 +271,17 @@ body.telaquatro .left_container {
 
 body.telaquatro .main_container {
     background: #8CECDA;
-    color: #000;
+    color: #000000;
 }
 
 body.telaquatro .right_container {
     background: #F5328C;
-    color: white;
 }
+
+
+/* =========================
+   TELA 6
+========================= */
 
 body.telatres .left_container {
     background: #8C0019;
@@ -189,119 +289,86 @@ body.telatres .left_container {
 
 body.telatres .main_container {
     background: #E56E8C;
-    color: #000;
+    color: #000000;
 }
 
 body.telatres .right_container {
     background: #A03CC8;
-    color: white;
 }
 
-.feed_container {
- display: block;
-    width: 100%;
-    height: 100%;
-}
 
-@keyframes led {
-    0%   { border-color: #FF0000; }
-    33%  { border-color: #00FF00; }
-    66%  { border-color: #0000FF; }
-    100% { border-color: #FF0000; }
-}
+/* =========================
+   DIVS
+========================= */
 
-#div-pai{
+#div-pai {
     display: flex;
     flex-direction: column;
+
     gap: 16px;
     padding: 16px;
+
     background: #FFFFFF;
+
     border: 1px solid #CCCCCC;
-    border-radius: 12px;
+
     margin: 20px auto;
+
     max-width: 800px;
 }
 
-.div-filho{
+.div-filho {
     padding: 16px;
+
     background: #8F3CB0;
-    color: var(--text-color);
+
+    color: #ffffff;
+
     border: 1px solid #A838F0;
-    border-radius: 8px;
+
     text-align: center;
 }
 
-h1{
-    color: var(--accent-color);
+
+/* =========================
+   TÍTULOS
+========================= */
+
+h1 {
+    color: #A838F0;
 }
 
-.paragrafoMaior{
-    color: var(--text-color);
-    font-weight: bold;
-    font-size: 20px;
-}
 
-.paragrafoMenor{
-    color: var(--text-color);
-    font-weight: normal;
-    font-size: 20px;
-}
+/* =========================
+   BOTÃO
+========================= */
 
-/* From Uiverse.io by barisdogansutcu */ 
 button {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
-  padding: 0 10px;
-  color: white;
-  text-shadow: 2px 2px #747474;
-  text-transform: uppercase;
-  cursor: pointer;
-  border: solid 2px black;
-  letter-spacing: 1px;
-  font-weight: 600;
-  font-size: 17px;
-  background-color: hsl(49deg 98% 60%);
-  border-radius: 50px;
-  position: relative;
-  overflow: hidden;
-  transition: all 0.5s ease;
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    padding: 10px 20px;
+
+    color: #ffffff;
+
+    background: #A838F0;
+
+    border: 2px solid #ffffff;
+
+    border-radius: 6px;
+
+    cursor: pointer;
+
+    font-size: 16px;
+    font-weight: bold;
+}
+
+button:hover {
+    background: #7B2CBF;
 }
 
 button:active {
-  transform: scale(0.9);
-  transition: all 100ms ease;
-}
-
-button svg {
-  transition: all 0.5s ease;
-  z-index: 2;
-}
-
-.play {
-  transition: all 0.5s ease;
-  transition-delay: 300ms;
-}
-
-button:hover svg {
-  transform: scale(3) translate(50%);
-}
-
-.now {
-  position: absolute;
-  left: 0;
-  transform: translateX(-100%);
-  transition: all 0.5s ease;
-  z-index: 2;
-}
-
-button:hover .now {
-  transform: translateX(10px);
-  transition-delay: 300ms;
-}
-
-button:hover .play {
-  transform: translateX(200%);
-  transition-delay: 300ms;
+    transform: scale(0.95);
 }
