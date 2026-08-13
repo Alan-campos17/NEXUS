@@ -372,3 +372,17 @@ button:hover {
 button:active {
     transform: scale(0.95);
 }
+
+.grid-conteudo {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+    width: 100%;
+}
+
+.bloco {
+    height: 90px;
+    border: 1px solid #ffffff;
+    border-radius: 14px;
+    background: #C864B4;
+}
