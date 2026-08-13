@@ -1,6 +1,6 @@
-/* =========================================
-   ESTRUTURA DAS TELAS
-========================================= */
+/* ================================
+   ESTRUTURA PRINCIPAL
+================================ */
 
 .app {
     display: grid;
@@ -9,101 +9,205 @@
         "header header header"
         "left main right";
 
-    grid-template-columns:
-        1fr
-        2fr
-        1fr;
+    grid-template-columns: 1fr 2fr 1fr;
 
     grid-template-rows:
-        80px
-        1fr;
+        64px
+        410px;
 
-    gap: 18px;
+    gap: 14px;
 
-    width: calc(100% - 50px);
+    width: calc(100% - 72px);
 
-    min-height: 650px;
+    margin: 24px auto;
 
-    margin: 25px auto;
-
-    padding: 20px;
+    padding: 0;
 }
 
 
-/* HEADER */
+/* ================================
+   TOPO
+================================ */
 
 .header_container {
     grid-area: header;
 
-    min-height: 70px;
-
-    border: 3px solid #ffffff;
+    border: 2px solid #ffffff;
 }
 
 
-/* ESQUERDA */
+/* ================================
+   ESQUERDA
+================================ */
 
 .left_container {
     grid-area: left;
 
-    min-height: 500px;
+    border: 2px solid #ffffff;
 
-    border: 3px solid #ffffff;
+    padding: 0;
+
+    border-radius: 0;
 }
 
 
-/* CENTRO */
+/* ================================
+   CENTRO
+================================ */
 
 .main_container {
     grid-area: main;
 
-    min-height: 500px;
+    border: 2px solid #ffffff;
 
-    border: 3px solid #ffffff;
+    padding: 0;
 
-    padding: 20px;
+    border-radius: 0;
 }
 
 
-/* DIREITA */
+/* ================================
+   DIREITA
+================================ */
 
 .right_container {
     grid-area: right;
 
-    min-height: 500px;
+    border: 2px solid #ffffff;
 
-    border: 3px solid #ffffff;
+    padding: 0;
+
+    border-radius: 0;
 }
 
 
-/* RESPONSIVIDADE */
+/* ==================================================
+   TELA 1
+   AZUL | VERMELHO | VERMELHO | AZUL
+================================================== */
 
-@media (max-width: 700px) {
+body.tela1 .header_container {
+    background: #49a8d1;
+}
 
-    .app {
+body.tela1 .left_container {
+    background: #d45a5a;
+}
 
-        grid-template-areas:
-            "header"
-            "left"
-            "main"
-            "right";
+body.tela1 .main_container {
+    background: #d45a5a;
+}
 
-        grid-template-columns: 1fr;
+body.tela1 .right_container {
+    background: #49a8d1;
+}
 
-        grid-template-rows:
-            70px
-            250px
-            350px
-            250px;
 
-        width: calc(100% - 20px);
+/* ==================================================
+   TELA 2
+   VERDE | ROXO | ROXO | VERDE
+================================================== */
 
-        padding: 10px;
-    }
+body.tela2 .header_container {
+    background: #438f38;
+}
 
-    .left_container,
-    .main_container,
-    .right_container {
-        min-height: 250px;
-    }
+body.tela2 .left_container {
+    background: #57009b;
+}
+
+body.tela2 .main_container {
+    background: #57009b;
+}
+
+body.tela2 .right_container {
+    background: #438f38;
+}
+
+
+/* ==================================================
+   TELA 3
+   LILÁS | VERDE | LILÁS | VERDE
+================================================== */
+
+body.tela3 .header_container {
+    background: #8178e8;
+}
+
+body.tela3 .left_container {
+    background: #438f38;
+}
+
+body.tela3 .main_container {
+    background: #8178e8;
+}
+
+body.tela3 .right_container {
+    background: #438f38;
+}
+
+
+/* ==================================================
+   TELA 4
+   AZUL ESCURO + VERDE
+================================================== */
+
+body.teladois .header_container {
+    background: #15195c;
+}
+
+body.teladois .left_container {
+    background: #15195c;
+}
+
+body.teladois .main_container {
+    background: #438f38;
+}
+
+body.teladois .right_container {
+    background: #15195c;
+}
+
+
+/* ==================================================
+   TELA 5
+   VERDE + AZUL + VERDE
+================================================== */
+
+body.telaquatro .header_container {
+    background: #438f38;
+}
+
+body.telaquatro .left_container {
+    background: #438f38;
+}
+
+body.telaquatro .main_container {
+    background: #49a8d1;
+}
+
+body.telaquatro .right_container {
+    background: #438f38;
+}
+
+
+/* ==================================================
+   TELA 6
+   VERMELHO | VERMELHO | ROXO | ROXO
+================================================== */
+
+body.telatres .header_container {
+    background: #d45a5a;
+}
+
+body.telatres .left_container {
+    background: #d45a5a;
+}
+
+body.telatres .main_container {
+    background: #57009b;
+}
+
+body.telatres .right_container {
+    background: #57009b;
 }
