@@ -328,48 +328,46 @@ button:active {
 
 /* =========================================
    HOME
+   Fundo verde, moldura rosa, blocos roxo,
+   faixa verde-claro cruzando o meio
 ========================================= */
 
-.home-container {
-    display: grid;
-
-    grid-template-columns: 1fr 1fr;
-
-    grid-template-rows: 90px 1fr;
-
-    grid-template-areas:
-        "topo topo"
-        "esq  dir";
-
-    gap: 14px;
-
-    width: calc(100% - 72px);
-
-    margin: 36px auto;
+body.home {
+    background-color: #3f8f3a;
 }
 
-.home-box {
-    min-height: 200px;
+.home-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 40px;
+
+    min-height: calc(100vh - 90px);
+}
+
+.home-frame {
+    width: 70%;
+    max-width: 700px;
+    aspect-ratio: 4 / 3;
+
+    background-color: #ff4da6;
 
     border: 2px solid #ffffff;
+
+    padding: 24px;
+
+    display: grid;
+    grid-template-rows: 1fr 14px 1fr;
+    gap: 0;
 }
 
-/* retângulo no topo — rosa claro */
-.home-box-1 {
-    grid-area: topo;
-    background-color: #ffb3d9;
+.home-bloco {
+    background-color: #4b0082;
 }
 
-/* quadrado esquerdo — rosa */
-.home-box-2 {
-    grid-area: esq;
-    background-color: #ff4da6;
-}
-
-/* quadrado direito — rosa escuro */
-.home-box-3 {
-    grid-area: dir;
-    background-color: #8a0044;
+.home-faixa {
+    background-color: #b6ffb6;
 }
 
 /* =========================================
