@@ -325,3 +325,34 @@ button:hover {
 button:active {
     transform: scale(0.95);
 }
+
+/* =========================================
+   TELAS COM BLOCO SUPERIOR E INFERIOR
+   TELA 1, TELA 4 E TELA 5
+========================================= */
+
+.app-com-bottom {
+    grid-template-areas:
+        "top top top"
+        "left main right"
+        "bottom bottom bottom";
+
+    grid-template-rows:
+        70px
+        410px
+        70px;
+}
+
+
+/* HEADER DE CIMA */
+
+.header_top {
+    grid-area: top;
+}
+
+
+/* HEADER DE BAIXO */
+
+.header_bottom {
+    grid-area: bottom;
+}
