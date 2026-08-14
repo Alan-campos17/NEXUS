@@ -1,84 +1,9 @@
 /* ================================
    ESTRUTURA PRINCIPAL
+   (já definida em main.css — não redeclarar .app aqui,
+   senão o grid de 3 linhas do .app-com-bottom é sobrescrito
+   e a Tela 1 / Tela 4 / Tela 5 perdem o bloco de baixo)
 ================================ */
-
-.app {
-    display: grid;
-
-    grid-template-areas:
-        "header header header"
-        "left main right";
-
-    grid-template-columns: 1fr 2fr 1fr;
-
-    grid-template-rows:
-        64px
-        410px;
-
-    gap: 14px;
-
-    width: calc(100% - 72px);
-
-    margin: 24px auto;
-
-    padding: 0;
-}
-
-
-/* ================================
-   TOPO
-================================ */
-
-.header_container {
-    grid-area: header;
-
-    border: 2px solid #ffffff;
-}
-
-
-/* ================================
-   ESQUERDA
-================================ */
-
-.left_container {
-    grid-area: left;
-
-    border: 2px solid #ffffff;
-
-    padding: 0;
-
-    border-radius: 0;
-}
-
-
-/* ================================
-   CENTRO
-================================ */
-
-.main_container {
-    grid-area: main;
-
-    border: 2px solid #ffffff;
-
-    padding: 0;
-
-    border-radius: 0;
-}
-
-
-/* ================================
-   DIREITA
-================================ */
-
-.right_container {
-    grid-area: right;
-
-    border: 2px solid #ffffff;
-
-    padding: 0;
-
-    border-radius: 0;
-}
 
 
 /* ==================================================
