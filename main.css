@@ -327,6 +327,40 @@ button:active {
 }
 
 /* =========================================
+   HOME
+========================================= */
+
+.home-container {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 14px;
+
+    width: calc(100% - 72px);
+
+    margin: 36px auto;
+}
+
+.home-box {
+    min-height: 240px;
+
+    border: 2px solid #ffffff;
+}
+
+.home-box-1 {
+    background-color: #49a8d1;
+}
+
+.home-box-2 {
+    background-color: #438f38;
+}
+
+.home-box-3 {
+    background-color: #57009b;
+}
+
+/* =========================================
    TELAS COM BLOCO SUPERIOR E INFERIOR
    TELA 1, TELA 4 E TELA 5
 ========================================= */
