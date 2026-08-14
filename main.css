@@ -1,493 +1,327 @@
-/* =========================================
-   CONFIGURAÇÕES GERAIS
-========================================= */
-
 * {
     box-sizing: border-box;
 }
 
 html,
 body {
-    width: 100%;
-    min-height: 100%;
     margin: 0;
     padding: 0;
-}
-
-body {
     min-height: 100vh;
-
-    background: #000000;
-
     font-family: Arial, sans-serif;
 }
 
-
-/* =========================================
+/* =========================
    NAVEGAÇÃO
-========================================= */
+========================= */
 
 .navbar {
     display: flex;
-
     align-items: center;
-
-    gap: 15px;
-
-    width: 100%;
+    gap: 12px;
 
     padding: 12px 20px;
 
-    background: #201045;
-
-    border: 2px solid #ffffff;
+    background-color: #24104f;
+    border: 1px solid #ffffff;
 }
 
-
 .navbar-item {
-    display: flex;
-
+    display: inline-flex;
     align-items: center;
     justify-content: center;
 
-    padding: 9px 18px;
+    padding: 10px 18px;
 
-    background: #ffffff;
-
+    background-color: #ffffff;
     color: #000000;
 
-    border-radius: 20px;
+    border-radius: 25px;
 
     text-decoration: none;
-
     font-weight: bold;
 
     transition: 0.2s;
 }
 
-
 .navbar-item:hover {
-    background: #9e4bf7;
-
+    background-color: #9e4bf7;
     color: #ffffff;
 }
-
 
 .navbar-item.active {
-    background: #9e4bf7;
-
+    background-color: #9e4bf7;
     color: #ffffff;
 }
 
 
-/* =========================================
-   HOME
-========================================= */
-
-.home-container {
-
-    display: grid;
-
-    grid-template-columns: repeat(3, 1fr);
-
-    gap: 20px;
-
-    width: calc(100% - 50px);
-
-    min-height: 500px;
-
-    margin: 25px auto;
-
-    padding: 20px;
-}
-
-
-.home-box {
-
-    min-height: 400px;
-
-    border: 3px solid #ffffff;
-}
-
-
-.home-box-1 {
-    background: #8b0055;
-}
-
-
-.home-box-2 {
-    background: #c864b4;
-}
-
-
-.home-box-3 {
-    background: #ff0096;
-}
-
-
-/* =========================================
-   GRID DAS TELAS
-========================================= */
+/* =========================
+   ESTRUTURA PRINCIPAL
+========================= */
 
 .app {
-
     display: grid;
 
+    width: calc(100% - 72px);
+    min-height: 480px;
+
+    margin: 36px auto;
+
     grid-template-areas:
-
         "header header header"
-
         "left main right";
 
-    grid-template-columns:
+    grid-template-columns: 1fr 2fr 1fr;
 
-        1fr
-        2fr
-        1fr;
+    grid-template-rows: 64px 410px;
 
-    grid-template-rows:
-
-        80px
-        1fr;
-
-    gap: 18px;
-
-    width: calc(100% - 50px);
-
-    min-height: 650px;
-
-    margin: 25px auto;
-
-    padding: 20px;
+    gap: 14px;
 }
-
-
-/* =========================================
-   HEADER
-========================================= */
 
 .header_container {
-
     grid-area: header;
-
-    min-height: 70px;
-
-    background: #000000;
-
-    border: 3px solid #ffffff;
 }
-
-
-/* =========================================
-   ESQUERDA
-========================================= */
 
 .left_container {
-
     grid-area: left;
-
-    min-height: 500px;
-
-    background: #8b0055;
-
-    border: 3px solid #ffffff;
 }
-
-
-/* =========================================
-   CENTRO
-========================================= */
 
 .main_container {
-
     grid-area: main;
-
-    min-height: 500px;
-
-    background: #c864b4;
-
-    border: 3px solid #ffffff;
-
-    padding: 20px;
 }
-
-
-/* =========================================
-   DIREITA
-========================================= */
 
 .right_container {
-
     grid-area: right;
-
-    min-height: 500px;
-
-    background: #ff0096;
-
-    border: 3px solid #ffffff;
 }
 
 
-/* =========================================
+/* =========================
+   BORDA DOS BLOCOS
+========================= */
+
+.header_container,
+.left_container,
+.main_container,
+.right_container {
+    border: 2px solid #ffffff;
+}
+
+
+/* =====================================================
    TELA 1
-========================================= */
+   FUNDO BRANCO
+   AZUL EM CIMA E EMBAIXO
+   ROSA ESQUERDA
+   VERMELHO ESCURO CENTRO
+   AZUL DIREITA
+===================================================== */
 
 body.tela1 {
-
-    background: #000000;
+    background-color: #ffffff;
 }
-
 
 body.tela1 .header_container {
-
-    background: #48a9d8;
+    background-color: #48a9d2;
 }
-
 
 body.tela1 .left_container {
-
-    background: #d45a5a;
+    background-color: #d45a5d;
 }
-
 
 body.tela1 .main_container {
-
-    background: #d45a5a;
+    background-color: #461010;
 }
-
 
 body.tela1 .right_container {
-
-    background: #48a9d8;
+    background-color: #48a9d2;
 }
 
 
-/* =========================================
+/* =====================================================
    TELA 2
-========================================= */
+   FUNDO BRANCO
+   VERDE EM CIMA
+   DOIS ROXOS
+   VERDE NA DIREITA
+===================================================== */
 
 body.tela2 {
-
-    background: #000000;
+    background-color: #ffffff;
 }
-
 
 body.tela2 .header_container {
-
-    background: #438b38;
+    background-color: #478f38;
 }
-
 
 body.tela2 .left_container {
-
-    background: #4f008f;
+    background-color: #500094;
 }
-
 
 body.tela2 .main_container {
-
-    background: #4f008f;
+    background-color: #500094;
 }
-
 
 body.tela2 .right_container {
-
-    background: #438b38;
+    background-color: #478f38;
 }
 
 
-/* =========================================
+/* =====================================================
    TELA 3
-========================================= */
+   FUNDO VERDE
+   RETÂNGULO ROXO EM CIMA
+   VERDE NAS LATERAIS
+   APENAS UM BLOCO ROXO NO CENTRO
+===================================================== */
 
 body.tela3 {
-
-    background: #000000;
+    background-color: #478f38;
 }
-
 
 body.tela3 .header_container {
-
-    background: #8279ed;
+    background-color: #8178e8;
 }
-
 
 body.tela3 .left_container {
-
-    background: #438b38;
+    background-color: #478f38;
 }
-
 
 body.tela3 .main_container {
-
-    background: #8279ed;
+    background-color: #8178e8;
 }
-
 
 body.tela3 .right_container {
-
-    background: #438b38;
+    background-color: #478f38;
 }
 
 
-/* =========================================
+/* =====================================================
    TELA 4
-========================================= */
-
-body.teladois {
-
-    background: #000000;
-}
-
-
-body.teladois .header_container {
-
-    background: #10164d;
-}
-
-
-body.teladois .left_container {
-
-    background: #10164d;
-}
-
-
-body.teladois .main_container {
-
-    background: #438b38;
-}
-
-
-body.teladois .right_container {
-
-    background: #10164d;
-}
-
-
-/* =========================================
-   TELA 5
-========================================= */
+   FUNDO VERDE CLARO
+   5 RETÂNGULOS FORMANDO UM QUADRADO
+   + RETÂNGULO NO MEIO
+===================================================== */
 
 body.telaquatro {
-
-    background: #000000;
+    background-color: #4d684d;
 }
-
 
 body.telaquatro .header_container {
-
-    background: #438b38;
+    background-color: #82e3a1;
 }
-
 
 body.telaquatro .left_container {
-
-    background: #4f008f;
+    background-color: #82e3a1;
 }
-
 
 body.telaquatro .main_container {
-
-    background: #4f008f;
+    background-color: #82e3a1;
 }
-
 
 body.telaquatro .right_container {
-
-    background: #438b38;
+    background-color: #82e3a1;
 }
 
 
-/* =========================================
+/* =====================================================
+   TELA 5
+   FUNDO VERDE CLARO
+   4 RETÂNGULOS ROXO ESCURO
+   + RETÂNGULO VERDE HORIZONTAL
+===================================================== */
+
+body.teladois {
+    background-color: #82a17c;
+}
+
+body.teladois .header_container {
+    background-color: #438f38;
+}
+
+body.teladois .left_container {
+    background-color: #33006b;
+}
+
+body.teladois .main_container {
+    background-color: #33006b;
+}
+
+body.teladois .right_container {
+    background-color: #33006b;
+}
+
+
+/* =====================================================
    TELA 6
-========================================= */
+===================================================== */
 
 body.telatres {
-
-    background: #000000;
+    background-color: #000000;
 }
-
 
 body.telatres .header_container {
-
-    background: #d45a5a;
+    background-color: #d45a5d;
 }
-
 
 body.telatres .left_container {
-
-    background: #d45a5a;
+    background-color: #d45a5d;
 }
-
 
 body.telatres .main_container {
-
-    background: #4f008f;
+    background-color: #500094;
 }
-
 
 body.telatres .right_container {
-
-    background: #4f008f;
+    background-color: #500094;
 }
 
 
-/* =========================================
-   RESPONSIVO
-========================================= */
+/* =========================
+   TEXTOS
+========================= */
 
-@media (max-width: 700px) {
+h1 {
+    color: #a838f0;
+}
 
-    .navbar {
+.paragrafoMaior {
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 20px;
+}
 
-        overflow-x: auto;
-
-        gap: 8px;
-
-        padding: 10px;
-    }
-
-
-    .navbar-item {
-
-        flex-shrink: 0;
-
-        padding: 8px 12px;
-    }
+.paragrafoMenor {
+    color: #ffffff;
+    font-size: 20px;
+}
 
 
-    .app {
+/* =========================
+   BOTÕES
+========================= */
 
-        grid-template-areas:
+button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
-            "header"
+    padding: 10px 25px;
 
-            "left"
+    background-color: #9e4bf7;
+    color: #ffffff;
 
-            "main"
+    border: 2px solid #ffffff;
+    border-radius: 25px;
 
-            "right";
+    font-weight: bold;
+    cursor: pointer;
 
-        grid-template-columns: 1fr;
+    transition: 0.2s;
+}
 
-        grid-template-rows:
+button:hover {
+    background-color: #7b2dcc;
+}
 
-            70px
-            250px
-            350px
-            250px;
-
-        width: calc(100% - 20px);
-
-        padding: 10px;
-    }
-
-
-    .home-container {
-
-        grid-template-columns: 1fr;
-
-        width: calc(100% - 20px);
-    }
-
+button:active {
+    transform: scale(0.95);
 }
