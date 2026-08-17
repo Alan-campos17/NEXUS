@@ -10,9 +10,6 @@ body {
     font-family: Arial, sans-serif;
 }
 
-/* =========================
-   NAVEGAÇÃO
-========================= */
 
 .navbar {
     display: flex;
@@ -94,9 +91,7 @@ body {
 }
 
 
-/* =========================
-   BORDA DOS BLOCOS
-========================= */
+
 
 .header_container,
 .left_container,
@@ -106,14 +101,6 @@ body {
 }
 
 
-/* =====================================================
-   TELA 1
-   FUNDO BRANCO
-   AZUL EM CIMA E EMBAIXO
-   ROSA ESQUERDA
-   VERMELHO ESCURO CENTRO
-   AZUL DIREITA
-===================================================== */
 
 body.tela1 {
     background-color: #ffffff;
@@ -136,13 +123,7 @@ body.tela1 .right_container {
 }
 
 
-/* =====================================================
-   TELA 2
-   FUNDO BRANCO
-   VERDE EM CIMA
-   DOIS ROXOS
-   VERDE NA DIREITA
-===================================================== */
+
 
 body.tela2 {
     background-color: #ffffff;
@@ -165,13 +146,7 @@ body.tela2 .right_container {
 }
 
 
-/* =====================================================
-   TELA 3
-   FUNDO VERDE
-   RETÂNGULO ROXO EM CIMA
-   VERDE NAS LATERAIS
-   APENAS UM BLOCO ROXO NO CENTRO
-===================================================== */
+
 
 body.tela3 {
     background-color: #478f38;
@@ -194,12 +169,7 @@ body.tela3 .right_container {
 }
 
 
-/* =====================================================
-   TELA 4
-   FUNDO VERDE CLARO
-   5 RETÂNGULOS FORMANDO UM QUADRADO
-   + RETÂNGULO NO MEIO
-===================================================== */
+
 
 body.telaquatro {
     background-color: #4d684d;
@@ -222,12 +192,7 @@ body.telaquatro .right_container {
 }
 
 
-/* =====================================================
-   TELA 5
-   FUNDO VERDE CLARO
-   4 RETÂNGULOS ROXO ESCURO
-   + RETÂNGULO VERDE HORIZONTAL
-===================================================== */
+
 
 body.teladois {
     background-color: #82a17c;
@@ -250,9 +215,6 @@ body.teladois .right_container {
 }
 
 
-/* =====================================================
-   TELA 6
-===================================================== */
 
 body.telatres {
     background-color: #000000;
@@ -275,9 +237,7 @@ body.telatres .right_container {
 }
 
 
-/* =========================
-   TEXTOS
-========================= */
+
 
 h1 {
     color: #a838f0;
@@ -295,9 +255,7 @@ h1 {
 }
 
 
-/* =========================
-   BOTÕES
-========================= */
+
 
 button {
     display: flex;
@@ -326,11 +284,7 @@ button:active {
     transform: scale(0.95);
 }
 
-/* =========================================
-   HOME
-   Fundo verde, moldura rosa, blocos roxo,
-   faixa verde-claro cruzando o meio
-========================================= */
+
 
 body.home {
     background-color: #3f8f3a;
@@ -370,10 +324,7 @@ body.home {
     background-color: #b6ffb6;
 }
 
-/* =========================================
-   TELAS COM BLOCO SUPERIOR E INFERIOR
-   TELA 1, TELA 4 E TELA 5
-========================================= */
+
 
 .app-com-bottom {
     grid-template-areas:
@@ -388,14 +339,11 @@ body.home {
 }
 
 
-/* HEADER DE CIMA */
-
 .header_top {
     grid-area: top;
 }
 
 
-/* HEADER DE BAIXO */
 
 .header_bottom {
     grid-area: bottom;
