@@ -10,6 +10,9 @@ body {
     font-family: Arial, sans-serif;
 }
 
+/* =========================
+   NAVEGAÇÃO
+========================= */
 
 .navbar {
     display: flex;
@@ -53,45 +56,51 @@ body {
 
 /* =========================
    ESTRUTURA PRINCIPAL
+   (Flexbox puro — sem CSS Grid, conforme exigido pela atividade)
+
+   Técnica: .app é um flex container com flex-wrap. O header_container
+   tem flex-basis: 100%, então ocupa a linha inteira sozinho e força
+   uma quebra de linha — os itens seguintes (left/main/right) "sobram"
+   pra próxima linha e ficam lado a lado, iguais a "left main right"
+   do grid antigo.
 ========================= */
 
 .app {
-    display: grid;
+    display: flex;
+    flex-wrap: wrap;
 
     width: calc(100% - 72px);
     min-height: 480px;
 
     margin: 36px auto;
 
-    grid-template-areas:
-        "header header header"
-        "left main right";
-
-    grid-template-columns: 1fr 2fr 1fr;
-
-    grid-template-rows: 64px 410px;
-
     gap: 14px;
 }
 
 .header_container {
-    grid-area: header;
+    flex: 1 1 100%; /* ocupa 100% da largura -> força quebra de linha */
+    height: 64px;
 }
 
 .left_container {
-    grid-area: left;
+    flex: 1; /* ~1 parte, equivalente ao "1fr" do grid antigo */
+    min-height: 410px;
 }
 
 .main_container {
-    grid-area: main;
+    flex: 2; /* ~2 partes, equivalente ao "2fr" do grid antigo */
+    min-height: 410px;
 }
 
 .right_container {
-    grid-area: right;
+    flex: 1;
+    min-height: 410px;
 }
 
 
-
+/* =========================
+   BORDA DOS BLOCOS
+========================= */
 
 .header_container,
 .left_container,
@@ -101,6 +110,14 @@ body {
 }
 
 
+/* =====================================================
+   TELA 1
+   FUNDO BRANCO
+   AZUL EM CIMA E EMBAIXO
+   ROSA ESQUERDA
+   VERMELHO ESCURO CENTRO
+   AZUL DIREITA
+===================================================== */
 
 body.tela1 {
     background-color: #ffffff;
@@ -123,7 +140,13 @@ body.tela1 .right_container {
 }
 
 
-
+/* =====================================================
+   TELA 2
+   FUNDO BRANCO
+   VERDE EM CIMA
+   DOIS ROXOS
+   VERDE NA DIREITA
+===================================================== */
 
 body.tela2 {
     background-color: #ffffff;
@@ -146,7 +169,13 @@ body.tela2 .right_container {
 }
 
 
-
+/* =====================================================
+   TELA 3
+   FUNDO VERDE
+   RETÂNGULO ROXO EM CIMA
+   VERDE NAS LATERAIS
+   APENAS UM BLOCO ROXO NO CENTRO
+===================================================== */
 
 body.tela3 {
     background-color: #478f38;
@@ -169,7 +198,12 @@ body.tela3 .right_container {
 }
 
 
-
+/* =====================================================
+   TELA 4
+   FUNDO VERDE CLARO
+   5 RETÂNGULOS FORMANDO UM QUADRADO
+   + RETÂNGULO NO MEIO
+===================================================== */
 
 body.telaquatro {
     background-color: #4d684d;
@@ -192,7 +226,12 @@ body.telaquatro .right_container {
 }
 
 
-
+/* =====================================================
+   TELA 5
+   FUNDO VERDE CLARO
+   4 RETÂNGULOS ROXO ESCURO
+   + RETÂNGULO VERDE HORIZONTAL
+===================================================== */
 
 body.teladois {
     background-color: #82a17c;
@@ -215,6 +254,9 @@ body.teladois .right_container {
 }
 
 
+/* =====================================================
+   TELA 6
+===================================================== */
 
 body.telatres {
     background-color: #000000;
@@ -237,7 +279,9 @@ body.telatres .right_container {
 }
 
 
-
+/* =========================
+   TEXTOS
+========================= */
 
 h1 {
     color: #a838f0;
@@ -255,7 +299,9 @@ h1 {
 }
 
 
-
+/* =========================
+   BOTÕES
+========================= */
 
 button {
     display: flex;
@@ -284,7 +330,11 @@ button:active {
     transform: scale(0.95);
 }
 
-
+/* =========================================
+   HOME
+   Fundo verde, moldura rosa, blocos roxo,
+   faixa verde-claro cruzando o meio
+========================================= */
 
 body.home {
     background-color: #3f8f3a;
@@ -311,40 +361,31 @@ body.home {
 
     padding: 24px;
 
-    display: grid;
-    grid-template-rows: 1fr 14px 1fr;
-    gap: 0;
+    display: flex;
+    flex-direction: column;
 }
 
 .home-bloco {
+    flex: 1; /* os dois blocos roxos dividem o espaço restante igualmente */
     background-color: #4b0082;
 }
 
 .home-faixa {
+    flex: 0 0 14px; /* faixa fixa de 14px no meio, não cresce nem encolhe */
     background-color: #b6ffb6;
 }
 
+/* =========================================
+   TELAS COM BLOCO SUPERIOR E INFERIOR
+   TELA 1, TELA 4 E TELA 5
 
+   header_top e header_bottom também usam flex-basis: 100%,
+   então cada um força sua própria quebra de linha — o resultado
+   é 3 linhas: topo / (left main right) / base.
+========================================= */
 
-.app-com-bottom {
-    grid-template-areas:
-        "top top top"
-        "left main right"
-        "bottom bottom bottom";
-
-    grid-template-rows:
-        70px
-        410px
-        70px;
-}
-
-
-.header_top {
-    grid-area: top;
-}
-
-
-
+.header_top,
 .header_bottom {
-    grid-area: bottom;
+    flex: 1 1 100%;
+    height: 70px;
 }

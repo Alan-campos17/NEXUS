@@ -1,8 +1,10 @@
 /* ================================
    ESTRUTURA PRINCIPAL
-   (já definida em main.css — não redeclarar .app aqui,
-   senão o grid de 3 linhas do .app-com-bottom é sobrescrito
-   e a Tela 1 / Tela 4 / Tela 5 perdem o bloco de baixo)
+   (já definida em main.css — não redeclarar .app aqui.
+   A estrutura agora é Flexbox: .header_container e
+   .header_top/.header_bottom usam flex-basis:100% pra
+   forçar quebra de linha. Redeclarar .app aqui sobrescreveria
+   isso e quebraria o layout de novo.)
 ================================ */
 
 
@@ -60,7 +62,7 @@ body.tela3 .header_container {
 }
 
 body.tela3 .left_container {
-    background: #114e07;
+    background: #438f38;
 }
 
 body.tela3 .main_container {
@@ -68,7 +70,7 @@ body.tela3 .main_container {
 }
 
 body.tela3 .right_container {
-    background: #115307;
+    background: #438f38;
 }
 
 
