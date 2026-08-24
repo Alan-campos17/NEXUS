@@ -234,7 +234,7 @@ body.telaquatro .right_container {
 ===================================================== */
 
 body.teladois {
-    background-color: #82a17c;
+    background-color: #478f38;
 }
 
 body.teladois .header_container {
@@ -332,12 +332,12 @@ button:active {
 
 /* =========================================
    HOME
-   Fundo verde, moldura rosa, blocos roxo,
-   faixa verde-claro cruzando o meio
+   Fundo verde, moldura navy, blocos roxo,
+   faixa verde cruzando o meio
 ========================================= */
 
 body.home {
-    background-color: #3f8f3a;
+    background-color: #478f38;
 }
 
 .home-container {
@@ -355,7 +355,7 @@ body.home {
     max-width: 700px;
     aspect-ratio: 4 / 3;
 
-    background-color: #ff4da6;
+    background-color: #15195c;
 
     border: 2px solid #ffffff;
 
@@ -367,12 +367,12 @@ body.home {
 
 .home-bloco {
     flex: 1; /* os dois blocos roxos dividem o espaço restante igualmente */
-    background-color: #4b0082;
+    background-color: #3d0e78;
 }
 
 .home-faixa {
     flex: 0 0 14px; /* faixa fixa de 14px no meio, não cresce nem encolhe */
-    background-color: #b6ffb6;
+    background-color: #2e7d17;
 }
 
 /* =========================================

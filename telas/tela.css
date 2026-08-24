@@ -76,7 +76,8 @@ body.tela3 .right_container {
 
 /* ==================================================
    TELA 4
-   AZUL ESCURO + VERDE
+   5 RETÂNGULOS AZUL-ESCUROS (topo, base, esquerda, meio, direita)
+   TODOS DA MESMA COR — O VERDE APARECE SÓ NOS ESPAÇOS ENTRE ELES
 ================================================== */
 
 body.teladois .header_container {
@@ -88,7 +89,8 @@ body.teladois .left_container {
 }
 
 body.teladois .main_container {
-    background: #438f38;
+    background: #15195c;
+    flex: 1; /* era flex:2 (largo) — agora é uma coluna fina igual às laterais */
 }
 
 body.teladois .right_container {
